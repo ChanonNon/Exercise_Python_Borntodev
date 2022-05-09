@@ -37,7 +37,7 @@ calculableButton.grid(row=2,column=0)
 labelResult = Label(MainWindow,text = "ผลลัพธ์")
 labelResult.grid(row = 2,column = 1)
 
-labelResult1 = Label(MainWindow,text = "ผลลัพธ์")
-labelResult1.grid(row = 3,column = 0)
+labelResult1 = Label(MainWindow)
+labelResult1.grid(row = 3,column = 1)
 
 MainWindow.mainloop()
