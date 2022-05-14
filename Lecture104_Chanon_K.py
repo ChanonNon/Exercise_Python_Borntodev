@@ -4,7 +4,6 @@ class Cutomer:
     age = 0
 
     def addCart(self):
-        
         print(f"Added product to {self.name} {self.lastname}'s cart")
     
 customer1 = Cutomer()
