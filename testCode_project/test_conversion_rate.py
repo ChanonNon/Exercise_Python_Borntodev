@@ -5,6 +5,7 @@ from tkinter import ttk
 currency_money = ['USD']
 
 c = CurrencyRates()
+a = CurrencyCodes()
 
 result1 = c.get_rates('USD')
 for i in result1.keys():
@@ -15,6 +16,7 @@ def button_clik(event):
     c = CurrencyRates()
     result4 = c.convert(cmb.get(), cmb1.get(), float(textBoxWeight.get())) 
     print(f"aaaa {'%.2f'%(result4)}")
+    labelResult.configure(text = '%.2f'%(result4)+" "+a.get_symbol(cmb1.get()))
 
 windows = Tk()
 windows.title("Currency")
@@ -40,7 +42,9 @@ calculableButton = Button(windows,text = "คำนวณ")
 calculableButton.bind("<Button-1>",button_clik)
 calculableButton.grid(row=2,column=0)
 
+labelResult = Label(windows,text = "ผลลัพธ์")
+labelResult.grid(row = 2,column = 1)
 
-result = c.convert(cmb.get(), cmb1.get(), 10)
+# result = c.convert(cmb.get(), cmb1.get(), textBoxWeight.get())
 
 windows.mainloop()
