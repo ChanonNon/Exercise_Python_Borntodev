@@ -7,8 +7,14 @@ root.title("Graph")
 root.geometry("400x500")
 
 def graph():
-    house_prices = np.random.normal(2000, 250, 50)
-    plt.plot(house_prices)
+    x = 0
+    for x in range(10):
+        x += 10
+        print(x)
+    data = {'apple': 10, 'orange': 15, 'lemon': 5, 'lime': 20}
+    names = list(data.keys())
+    values = list(data.values())
+    plt.plot(names,values)
     plt.show()
 
 my_button = Button(root, text="Graph Itl", command=graph)
